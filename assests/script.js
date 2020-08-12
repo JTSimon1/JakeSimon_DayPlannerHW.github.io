@@ -3,7 +3,6 @@ var formEl = document.getElementById('form');
 var planEl = document.getElementById('planTime');
 
 $(document).ready(()=> {
-    localStorage.getItem()
     for (i=5; i < 22; i++) {
         let timeEl = i +':00 - ' + (i+1)+':00';
         const divEl = document.createElement('div');
