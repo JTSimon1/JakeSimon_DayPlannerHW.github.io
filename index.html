@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='./assests/style.css' rel='stylesheet'>
+    <title>Daily Planner</title>
+</head>
+<body>
+
+    <div class ='container'>
+        <div class = 'header'>
+            <h1>Daily Planner</h1>
+            <p id = 'date'></p>
+        </div>
+
+        <div class='popUp' id='form'>
+                <h1>New Objective</h1>
+                <input placeholder="Insert Objective and select a time" type="text" id='newObj'>
+                <button id="reset">Reset Day</button>
+        </div>
+        <!-- this is the div that controls the main schedule and i made divs for every time zone so i can call a function by just pressing the -->
+        <div class = 'schedule' id='timeZones'>
+        </div>
+    </div>
+
+
+    <script src="./assests/moment.js"></script>
+    <script src="./assests/jQuery.js"></script>
+    <script src='./assests/script.js' type='text/javaScript'>
+    document.getElementById('date').innerHTML = moment().format('dddd MMM DD YYYY');
+    var formEl = document.getElementById('form'); 
+
+
+    // for displaying different colors, when the time has passed the block of time turns red...use isSame, isBetween, and isBefore
+
+    // I need to make a function that displays a form and when saved displays the content in the right block
+
+    };
+    </script>
+</body>
+</html>
