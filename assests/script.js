@@ -3,29 +3,28 @@ var formEl = document.getElementById('form');
 var planEl = document.getElementById('planTime');
 
 $(document).ready(()=> {
-    
+    localStorage.getItem()
     for (i=5; i < 22; i++) {
         let timeEl = i +':00 - ' + (i+1)+':00';
-        let divEl = document.createElement('div');
+        const divEl = document.createElement('div');
         let hTag = document.createElement('h1');
-        hTag.setAttribute("id", "objSelector");
         hTag.append(timeEl)
         divEl.append(hTag)
+        divEl.addEventListener("click", (e) => {
+            console.log("yes");
+            var newObjectiveEl = document.getElementById('newObj').value;
+            var node = document.createElement("p");
+            var textNode = document.createTextNode(newObjectiveEl);
+            node.appendChild(textNode);
+            divEl.appendChild(node);
+            localStorage.setItem(divEl.innerHTML, node.innerHTML);
+
+            
+        })
 
         $("#timeZones").append(divEl)
         let m = moment()
         let m2 = moment(i, 'h:mm')
-
-
-        $("#objSelector").on("click", () => {
-            let para = document.createElement('p');
-            var newObjectiveEl = document.getElementById('newObj').value;
-            newObjectiveEl.appendChild(para);
-            para.append($("#objSelector"));
-    
-            console.log(newObjectiveEl);
-
-        });
 
         if (m.diff(m2, 'hours', true) > 1) {
             console.log(m);
@@ -39,8 +38,13 @@ $(document).ready(()=> {
         };
         divEl.classList.add('planTime');
         $("#timeZones").append(divEl);
-    }
+
+    };
+
+
 });
+
+
 
 
 
