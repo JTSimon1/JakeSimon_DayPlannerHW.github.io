@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.calendar {
+    background-color: lightblue;
+    border: solid black;
+    border-radius: 2rem;
+    width: 80vw;
+    height: 400px;
+    padding: 1rem;
+    margin: 2rem;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+}
+
+.month-indicator {
+    background-color: white;
+    align-items: center;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    border: solid black;
+    border-radius: 2rem;
+}
+
+.day-of-week {
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+}
+
+.month-indicator:hover {
+    background-color: lightcyan;
+}
+
+.date-grid {
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+}
+
+.container {
+    background-color: grey;
+    margin: 1em;
+    padding: 1em;
+    border: solid black;
+    border-radius: 1em;
+}
+
+.past {
+    background-color: red;
+    border: solid black;
+    border-radius: 2rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin: 1em;
+    padding: 1rem;
+}
+
+.past:hover {
+    background-color: pink;
+}
+
+.future {
+    background-color: green;
+    border: solid black;
+    border-radius: 2rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin: 1em;
+    padding: 1rem;
+}
+
+.future:hover {
+    background-color: lightgreen;
+}
+
+.header {
+    background-color: lightcyan;
+    margin: 1em;
+    padding: 1em;
+    border: solid black;
+    border-radius: 1em;
+}
+
+.schedule {
+    background-color: lightcyan;
+    margin: 1em;
+    padding: 1em;
+    border: solid black;
+    border-radius: 1em;
+    cursor: pointer;
+}
+
+.planTime {
+    border: solid black;
+    border-radius: 2rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin: 1em;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.planTime:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+.popUp {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: lightcyan;
+    border: solid black;
+    margin: 1em;
+    padding: 1rem;
+    border-radius: 2rem;
+    cursor: ß;
+}
+#newObj {
+    margin: 1em;
+    padding: 1em;
+    width: 300px;
+}
+.hide {
+    display: none;
+}
+
+.submitBtn {
+    margin: 1em;
+    padding: .5em;
+    background-color: lightblue;
+    border: solid black;
+    border-radius: 2rem;
+}
